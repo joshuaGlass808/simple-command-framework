@@ -21,6 +21,7 @@
             "SCF\\": "src/"
         }
     },
+    "prefer-stable": true,
     "require": {
         "php": "^7.4"
     },
