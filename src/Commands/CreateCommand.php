@@ -24,7 +24,7 @@ class CreateCommand extends BaseCommand implements CommandContract
     public function execute(): void
     {
         $args = $this->getArgs();
-        $class = $args['shell-name'];
+        $class = $args['command-name'];
         $path = $args['path'] ?? "/app/Commands";
         $file = getcwd() . "{$path}/{$class}.php";
         $this->warn("Building file: {$file}\n");
