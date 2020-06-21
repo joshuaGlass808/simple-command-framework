@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace SCF\Shell;
+namespace SCF\Commands;
 
 use SCF\Contracts\CommandContract;
 use SCF\Traits\CommandTrait;
