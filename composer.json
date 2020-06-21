@@ -7,8 +7,14 @@
     "keywords": [
         "framework",
         "commands",
-        "php-cmd",
         "scf"
+    ],
+    "authors": [
+        {
+            "name": "J Glass",
+            "email": "joshua.lee.glass@gmail.com",
+            "homepage": "https://github.com/joshuaGlass808"
+        }
     ],
     "autoload": {
         "psr-4": {
