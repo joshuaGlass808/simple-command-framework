@@ -12,7 +12,7 @@ trait KernelTrait
     public static function printHelp(): void
     {
         $classes = self::classes();
-        print "Usage: ./scf <shell:signature> [--args=...]\n"
+        print "Usage: ./scf <command:signature> [--args=...]\n"
             . "       ./scf -h\n\n";
 		
         rsort($classes);

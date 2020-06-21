@@ -12,8 +12,8 @@ class CreateCommand extends BaseCommand implements CommandContract
 	public string $signature = 'create:command';
 	public array $argumentMap = [
 		'--path=' => 'override default path (app/Commands/).',
-		'--shell-name=' => 'Name of the Shell you wish to create.',
-		'--signature=' => 'override default signature',
+		'--command-name=' => 'Name of the class for the command you wish to create.',
+		'--signature=' => 'set the signature. Example: "create:command"',
 	];
 
     /**
@@ -53,11 +53,11 @@ class CreateCommand extends BaseCommand implements CommandContract
     protected function getClassTemplate(string $class, ?string $signature): string 
     {
         return "<?php declare(strict_types=1);\n\nnamespace App\Commands;\n\n"
-            . "use SCF\\Interfaces\\CmdInterface;\n"
-            . "use SCF\\Shell\\BaseCmd;\n"
-            . "use SCF\\Traits\\CmdTrait;\n\n"
-            . "class {$class} extends BaseCmd implements CmdInterface\n"
-            . "{\n    use CmdTrait;\n\n"
+            . "use SCF\\Contracts\\CommandContract;\n"
+            . "use SCF\\Commands\\BaseCommand;\n"
+            . "use SCF\\Traits\\CommandTrait;\n\n"
+            . "class {$class} extends BaseCommand implements CommandContract\n"
+            . "{\n    use CommandTrait;\n\n"
 			. "    public string \$signature = '" . $signature . "';\n"
 			. "    public array \$argumentMap = [];\n\n"
             . "    public function execute(): void\n"
