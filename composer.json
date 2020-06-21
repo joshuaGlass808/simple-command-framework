@@ -1,0 +1,24 @@
+{
+    "name": "scf/simple-command-framework",
+    "homepage": "https://github.com/joshuaGlass808/simple-command-framework",
+    "description": "The Simple Command Framework.",
+    "license": "MIT",
+    "keywords": [
+        "framework",
+        "commands",
+        "php-cmd",
+        "scf"
+    ],
+    "autoload": {
+        "psr-4": {
+            "SCF\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^7.4"
+    },
+    "prefer-stable": true,
+    "require-dev": {
+        "phpunit/phpunit": "^9.2"
+    }
+}
