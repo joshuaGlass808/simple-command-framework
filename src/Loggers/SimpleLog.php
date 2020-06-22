@@ -12,9 +12,11 @@ class SimpleLog
      * 
      * @return bool Returns True or False on Succeed/Fail.
      */
-    public static function write(string $log): bool 
+    public static function write(string $log, ?string $path = null, ?string $filename = null): bool 
     {
-        $file = self::LOG_PATH . 'application-' . date('YYYYmmdd') . '.log';
+        $path ??= self::LOG_PATH;
+        $filename ??= 'application-' . date('YYYYmmdd') . '.log';
+        $file = $path . $filename;
         if (($fd = fopen($file, 'a')) === false) {
             return false;
         }
