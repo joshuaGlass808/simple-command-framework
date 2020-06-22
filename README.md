@@ -1,3 +1,4 @@
+![Build](https://github.com/joshuaGlass808/simple-command-framework/workflows/Build/badge.svg)
 [![Latest Stable Version](https://poser.pugx.org/scf/simple-command-framework/v)](//packagist.org/packages/scf/simple-command-framework)
 [![License](https://poser.pugx.org/scf/simple-command-framework/license)](//packagist.org/packages/scf/simple-command-framework)
 [![Dependents](https://poser.pugx.org/scf/simple-command-framework/dependents)](//packagist.org/packages/scf/simple-command-framework)
